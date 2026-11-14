@@ -82,6 +82,76 @@ La idea cubre los 7 objetivos del desafío salvo las coordenadas personalizadas,
 
 Los sitios fuera del modelo de elevación polar (Apolo y, según su latitud, el de otro país) usan horizonte plano, y la web lo indica.
 
+## Ampliación: herramienta interdisciplinaria
+
+Los cuatro módulos nuevos se agregan en versión acotada, sobre los mismos archivos de datos, sin IA y sin cálculos nuevos sin fuente. Se construyen después del núcleo y en este orden.
+
+| Orden | Módulo | Versión que construimos | Lo que no hacemos | Horas |
+| --- | --- | --- | --- | --- |
+| 1 | Cálculos y procesos | Botón "Cómo se calculó" en cada métrica: dato original, fórmula, valores, resultado y unidad. | Un visor genérico de todas las operaciones internas. | 2 |
+| 2 | Colaboración ciencia e ingeniería | Dos juegos de requisitos sobre el mismo escenario y la "zona de acuerdo" en el mapa de calor. Enlace compartible. | Usuarios, mensajes o edición en simultáneo. | 2 a 3 |
+| 3 | Inferencias y análisis | Conclusiones generadas por reglas fijas, cada una enlazada a su cálculo. Avisos de límites e inconsistencias. | Texto generado por un modelo de lenguaje. | 2 |
+| 4 | Calculadora de misión | Cinco fórmulas del proyecto con sus variables; el resultado se puede aplicar al escenario. | Una calculadora científica general. | 1 a 2 |
+
+### 1. Cálculos y procesos
+
+Cada número de la pantalla se puede abrir y recorrer desde el dato de NASA hasta la conclusión.
+
+| Paso | Fórmula | Entradas | Resultado |
+| --- | --- | --- | --- |
+| Ángulo del horizonte | θ = arctan(h/d − d/(2R)), máximo sobre d | h: diferencia de altura (m), d: distancia (m), R = 1.737.400 m. Fuente: LOLA | θ en grados, por azimut |
+| Fracción visible del Sol | f = (e − θ + r) / (2r), limitado entre 0 y 1 | e: elevación del Sol (°), r = 0,27°. Fuente: Horizons | f sin unidad |
+| Tierra visible | visible si e\_T > θ | e\_T: elevación de la Tierra (°). Fuente: Horizons | sí o no |
+| % de tiempo con Sol | promedio de f × 100 | f de cada hora de la misión | % |
+| Noche más larga | mayor racha de horas con f = 0 | f de cada hora | horas |
+| Veredicto | sobrevive si noche más larga ≤ autonomía | autonomía (h), cargada por el usuario | sí, al límite o no |
+| Margen en días | días consecutivos viables desde la fecha elegida | viabilidad por fecha | días |
+
+La fracción visible del Sol es una aproximación lineal y se indica como tal.
+
+### 2. Colaboración entre ciencia e ingeniería
+
+El equipo de ciencia y el de ingeniería cargan cada uno sus requisitos y la herramienta muestra dónde se cumplen los dos.
+
+| Perfil | Requisitos que carga | Lo que ve del otro |
+| --- | --- | --- |
+| Ciencia | Sitios de interés, horas mínimas de luz para operar instrumentos, horas mínimas de contacto para bajar datos. | Qué límite de ingeniería descarta cada sitio y por cuánto. |
+| Ingeniería | Autonomía de batería, corte de comunicación máximo, altura del mástil. | Qué sitios y fechas interesan a ciencia y cuánto margen les queda. |
+
+El mapa de calor pasa a tener tres estados: cumple ambos, cumple uno solo (y cuál) o no cumple ninguno. El enlace compartible guarda el escenario completo con los dos juegos de requisitos.
+
+### 3. Inferencias y análisis
+
+Las inferencias son frases armadas con reglas fijas sobre los números ya calculados. Cada una muestra el cálculo que la respalda.
+
+| Tipo | Regla | Ejemplo de salida |
+| --- | --- | --- |
+| Factor limitante | Comparar cuál umbral falla primero. | "El límite de este plan es la comunicación, no la energía." |
+| Sensibilidad | Recalcular con ±1 día, ±100 m y ±1 m de mástil. | "Un día de retraso cambia el veredicto." |
+| Escenarios | Comparar las alternativas viables. | "El sitio vecino tolera \[N\] días más de retraso." |
+| Límite de los datos | Detectar horizonte plano, píxeles sin dato o fechas fuera del rango. | "Este sitio usa horizonte plano: el resultado es optimista." |
+| Inconsistencia | Verificar valores físicamente imposibles. | "Elevación solar fuera del rango esperado para esta latitud." |
+
+Si una regla no tiene datos suficientes, no muestra nada.
+
+### 4. Calculadora de misión
+
+La calculadora ofrece las fórmulas del proyecto y deja aplicar el resultado al escenario.
+
+| Cálculo | Fórmula | Se usa para |
+| --- | --- | --- |
+| Ángulo del horizonte | θ = arctan(h/d − d/(2R)) | Verificar a mano un punto del panorama. |
+| Distancia al horizonte liso | d = √(2Rh) | Ver cuánto se amplía la vista al subir el mástil. |
+| Potencia del panel | P = P\_nominal × f × cos(i) | Estimar la generación; i es el ángulo entre el Sol y la normal del panel. |
+| Energía para la noche | E = consumo × noche más larga | Saber cuántos Wh hacen falta. |
+| Autonomía | autonomía = capacidad / consumo | Cargar el umbral del veredicto con datos del módulo. |
+
+La potencia y la energía son estimaciones simples; la web lo aclara junto al resultado.
+
+### Qué se posterga para hacer lugar
+
+Son 7 a 9 horas de trabajo. Para que entren, el modo misión queda fuera y el margen en kilómetros pasa a ser lo primero que se recorta. Si el domingo a las 11:00 el núcleo no está validado, de esta ampliación solo se construye el módulo 1.
+
 ## Las pantallas
 
 La web tiene una sola página con cinco zonas. El usuario entra, toca "Ver ejemplo" y ya tiene cargado el caso del retraso.
