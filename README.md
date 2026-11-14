@@ -43,6 +43,7 @@ Las herramientas actuales (**Quickmap**, **Moon Trek**, **JPL Horizons**) son su
 
 ## 📂 Estructura del Repositorio
 
+> 🧠 **Contexto compartido del equipo (cosas charladas, acuerdos y pendientes por definir):** Leé y actualizá **[Bitácora de Contexto y Pendientes](./docs/bitacora-y-pendientes.md)**.
 > 📖 **¿No sabés dónde guardar algo?** Leé el **[Manual de Organización del Repositorio](./docs/manual-organizacion-repo.md)**.
 > 🛰️ **¿Buscás las APIs de la NASA y el contexto técnico?** Entrá a **[APIs de la NASA y Contexto Técnico](./docs/apis-nasa-y-contexto.md)** y probá `python scripts/consultar_horizons.py`.
 
