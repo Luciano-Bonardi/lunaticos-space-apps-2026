@@ -19,3 +19,4 @@ Para no pisarnos cuando subamos ideas al mismo tiempo, nombrá tus archivos con 
 1. **Volcamos propuestas** en `/ideas`.
 2. **Debatimos y votamos** en equipo qué enfoque, herramientas y alcance de MVP quedan seleccionados.
 3. **Unificamos:** Lo que el equipo aprueba en firme se pasa en limpio a `/docs` (decisiones de arquitectura, diseño definitivo y alcance del MVP) y empieza a construirse en `/frontend`, `/backend`, `/data`, `/notebooks` y `/scripts`.
+

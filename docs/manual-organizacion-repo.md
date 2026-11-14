@@ -54,3 +54,4 @@ En esta etapa todavía estamos definiendo qué vamos a hacer exactamente y con q
 1. **En la fase de `/ideas`:** Nombrá tus archivos incluyendo tu nombre o iniciales (ej. `ideas/propuesta-luciano.md` o `ideas/propuesta-sguenio.md`). Así nunca habrá conflictos de merge.
 2. **Ramas:** Usá ramas `feat/<nombre>` (por ejemplo `feat/ideas-iniciales` o `feat/definicion-stack`) como indica [CONTRIBUTING.md](../CONTRIBUTING.md).
 3. **Secretos y claves:** Nunca guardes tokens ni contraseñas en ninguna carpeta; usá siempre un archivo `.env` local basado en [.env.example](../.env.example).
+

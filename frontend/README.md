@@ -20,3 +20,4 @@ Se conecta directamente con:
 
 ## Próximo paso sugerido
 Prototipar la vista de comparación lado a lado con el selector de sitios/fechas y el gráfico de Sol y Tierra respecto del horizonte, definiendo previamente el framework de UI y librería gráfica 2D/3D (**A definir por el equipo**).
+

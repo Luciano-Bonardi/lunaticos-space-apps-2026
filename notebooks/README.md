@@ -17,3 +17,4 @@ Se conecta directamente con:
 
 ## Próximo paso sugerido
 Crear un primer notebook que consulte JPL Horizons para una coordenada del polo sur lunar y grafique la curva de elevación del Sol y de la Tierra durante un día lunar o estación completa (librerías específicas **A definir por el equipo**).
+

@@ -18,3 +18,4 @@ Se conecta directamente con:
 
 ## Próximo paso sugerido
 Implementar el servicio o módulo que calcule la elevación del Sol y de la Tierra sobre el perfil de horizonte LOLA para una coordenada y rango de fechas dados, definiendo previamente el lenguaje y framework del servidor (**A definir por el equipo**).
+

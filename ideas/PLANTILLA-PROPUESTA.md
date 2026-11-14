@@ -28,3 +28,4 @@
 ## 5. Pros y Contras para el Hackathon (tiempo de desarrollo)
 - **Ventajas:**
 - **Riesgos / Complejidad:**
+

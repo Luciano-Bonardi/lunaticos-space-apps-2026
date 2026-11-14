@@ -17,3 +17,4 @@ Se conecta directamente con:
 
 ## Próximo paso sugerido
 Escribir un script para descargar y guardar en `data/raw/` las efemérides de JPL Horizons para los sitios candidatos del polo sur lunar (formato de salida y parámetros de ejecución **A definir por el equipo**).
+

@@ -28,3 +28,4 @@
 ## 4. Cuidado con archivos pesados y secretos
 - No subas credenciales ni archivos `.env` (usá `.env.example` como plantilla).
 - Guardá los datasets crudos pesados (como recortes grandes de LOLA o descargas masivas de Horizons) dentro de `data/raw/`, que ya está excluido en `.gitignore`.
+

@@ -19,3 +19,4 @@ Se conecta directamente con:
 
 ## Próximo paso sugerido
 Armar el archivo inicial de sitios curados (coordenadas de misiones Apollo, CLPS y polo sur lunar) y definir la resolución/recorte del dataset LOLA y el formato de almacenamiento (**A definir por el equipo**).
+
