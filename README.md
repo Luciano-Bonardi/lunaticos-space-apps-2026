@@ -43,13 +43,16 @@ Las herramientas actuales (**Quickmap**, **Moon Trek**, **JPL Horizons**) son su
 
 ## 📂 Estructura del Repositorio
 
+> 📖 **¿No sabés dónde guardar algo?** Leé el **[Manual de Organización del Repositorio](./docs/manual-organizacion-repo.md)** (especial para esta etapa de definición de idea, entorno y herramientas).
+
 ```text
-├── docs/        → Documentación del challenge, decisiones y estado de MCPs
-├── data/        → Datasets (efemérides precomputadas, topografía LOLA, sitios curados)
-├── backend/     → Cálculo de posiciones Sol/Tierra, horizonte y métricas
-├── frontend/    → Interfaz de usuario y visualizaciones 2D/3D
-├── notebooks/   → Exploración de datos y prototipos de cálculo
-└── scripts/     → Utilidades de descarga y preprocesamiento
+├── ideas/       → 💡 Brainstorming, propuestas individuales, bocetos y opciones de stack (Fase actual)
+├── docs/        → 📋 Documentación oficial, acuerdos unificados, manual del repo y estado de MCPs
+├── data/        → 🗂️ Datasets limpios (efemérides precomputadas, perfiles LOLA, sitios curados)
+├── backend/     → ⚙️ Cálculo de posiciones Sol/Tierra, horizonte y métricas
+├── frontend/    → 🖥️ Interfaz de usuario y visualizaciones 2D/3D
+├── notebooks/   → 🧪 Exploración de datos y prototipos de cálculo
+└── scripts/     → 🛠️ Utilidades de descarga y preprocesamiento
 ```
 
 Cada carpeta cuenta con su propio `README.md` explicando qué contiene, con qué objetivos se conecta y cuál es el próximo paso sugerido.

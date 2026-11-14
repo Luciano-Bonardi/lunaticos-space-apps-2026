@@ -4,7 +4,7 @@
 Este proyecto del equipo **Lunáticos 2026** (NASA Space Apps Challenge 2026) busca crear una herramienta intuitiva para que planificadores de misión, docentes y público general comparen sitios y fechas de alunizaje en el polo sur lunar. En esta región (clave por el agua congelada y las misiones CLPS/Artemis), pequeños cambios de ubicación o fecha alteran drásticamente la iluminación y la visibilidad de la Tierra. La herramienta visualiza la posición del Sol y la Tierra respecto del horizonte real del terreno para evaluar generación de energía solar y ventanas de comunicación directa.
 
 ## Contenido de esta carpeta y conexión con los objetivos
-En `/docs` se centraliza la documentación del desafío, las decisiones de arquitectura, el estado de las integraciones (como `mcp-status.md`) y los criterios de diseño y validación científica.
+En `/docs` se centraliza la documentación oficial del desafío, las decisiones de arquitectura ya consensuadas (que nacen en `/ideas`), el **[Manual de Organización del Repositorio](./manual-organizacion-repo.md)**, el estado de las integraciones ([mcp-status.md](./mcp-status.md)) y los criterios de diseño y validación científica.
 Se conecta transversalmente con todos los objetivos del challenge:
 - **Objetivo 1:** Selección y comparación de sitios (Apollo, CLPS, otros programas, coordenadas propias), lado a lado.
 - **Objetivo 2:** Flexibilidad de fecha/hora y cambios a lo largo de días lunares/estaciones.
@@ -21,3 +21,4 @@ Se conecta transversalmente con todos los objetivos del challenge:
 
 ## Próximo paso sugerido
 Documentar la lista inicial de sitios de alunizaje a comparar (Apollo, CLPS y otros programas) y definir el alcance del MVP junto con el stack técnico exacto (**A definir por el equipo**).
+
