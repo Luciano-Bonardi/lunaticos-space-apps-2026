@@ -1,0 +1,10 @@
+# Estado de MCPs en Antigravity
+
+Auditoría de solo lectura realizada durante el setup inicial del repositorio **Lunáticos 2026** y actualizada tras autenticar GitHub (`Luciano-Bonardi`).
+
+| MCP | Herramienta probada | Estado | Error textual / Detalle | Causa probable | Cómo arreglarlo |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `github` | `search_repositories` + `gh auth status` | ✅ token actualizado (🔄 recargar MCP) | Inicialmente `Authentication Failed: Bad credentials` (token `ghp_R5uQ...` vencido). Se sincronizó en `mcp_config.json` el nuevo token activo de `gh` (`Luciano-Bonardi`, scopes `repo`, `read:org`, `workflow`, `gist`). | El proceso stdio del MCP mantenía en memoria la variable de entorno anterior hasta recargar el servidor MCP. | En Antigravity, ir a **Additional Options (...) > MCP Servers** y hacer clic en **Refresh / Restart** sobre `github` (o reiniciar la ventana). `gh` CLI ya funciona al 100%. |
+| `github-mcp-server` | `search_repositories` | ✅ token actualizado (🔄 recargar MCP) | Mismo comportamiento que `github` (configuración duplicada de `@modelcontextprotocol/server-github`). Token actualizado en `mcp_config.json`. | Proceso stdio iniciado con el token viejo en memoria. | Recargar el servidor desde **MCP Servers** (opcionalmente eliminar este duplicado y dejar solo `github`). |
+| `hostinger` | `search` (`query: "list domains"`) y `execute` (`domains_portfolio_list`) | ⚠️ responde con error | `search`: OK local. `execute`: `Encountered error in tool execution: HTTP 401: {"message":"Unauthenticated.","correlation_id":"a3398aeb-6f60-40ca-8b4c-38f4b6d7a99f"}` | El buscador de operaciones local responde, pero el token de API de Hostinger (`API_TOKEN` / `HOSTINGER_API_TOKEN`) está vencido o inválido. | Generar un API Token válido en el panel hPanel de Hostinger y actualizarlo en `~/.gemini/config/mcp_config.json`. |
+| `stitch` | `list_projects` (`pageSize: 5`) | ✅ ok | Sin errores (devolvió 3 proyectos correctamente). | N/A (autenticado y operativo). | No requiere acción. |
