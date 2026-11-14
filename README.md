@@ -43,7 +43,8 @@ Las herramientas actuales (**Quickmap**, **Moon Trek**, **JPL Horizons**) son su
 
 ## 📂 Estructura del Repositorio
 
-> 📖 **¿No sabés dónde guardar algo?** Leé el **[Manual de Organización del Repositorio](./docs/manual-organizacion-repo.md)** (especial para esta etapa de definición de idea, entorno y herramientas).
+> 📖 **¿No sabés dónde guardar algo?** Leé el **[Manual de Organización del Repositorio](./docs/manual-organizacion-repo.md)**.
+> 🛰️ **¿Buscás las APIs de la NASA y el contexto técnico?** Entrá a **[APIs de la NASA y Contexto Técnico](./docs/apis-nasa-y-contexto.md)** y probá `python scripts/consultar_horizons.py`.
 
 ```text
 ├── ideas/       → 💡 Brainstorming, propuestas individuales, bocetos y opciones de stack (Fase actual)

@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "description": "Sitios de alunizaje de referencia para comparación en Lunáticos 2026",
+    "coordinate_system": "Lunar Geodetic (IAU / LOLA)",
+    "sources": [
+      "https://ssd.jpl.nasa.gov/horizons/",
+      "https://quickmap.lroc.asu.edu/",
+      "https://trek.nasa.gov/moon/"
+    ]
+  },
+  "sites": [
+    {
+      "id": "shackleton-connecting-ridge",
+      "name": "Connecting Ridge (Shackleton - de Gerlache)",
+      "program": "Artemis III Candidate / Polo Sur",
+      "latitude_deg": -89.45,
+      "longitude_deg": 222.0,
+      "elevation_km": 1.8,
+      "notes": "Cresta con altísima fracción de iluminación anual y proximidad a trampas frías con hielo de agua."
+    },
+    {
+      "id": "shackleton-rim",
+      "name": "Borde del Cráter Shackleton",
+      "program": "Artemis III Candidate / Polo Sur",
+      "latitude_deg": -89.54,
+      "longitude_deg": 0.0,
+      "elevation_km": 2.1,
+      "notes": "Picos de luz casi continua en el borde; el interior del cráter está en sombra permanente (PSR)."
+    },
+    {
+      "id": "malapert-massif",
+      "name": "Macizo de Malapert (Malapert Massif)",
+      "program": "Artemis III Candidate / CLPS IM-1",
+      "latitude_deg": -85.95,
+      "longitude_deg": 0.5,
+      "elevation_km": 4.5,
+      "notes": "Excelente línea de visión directa hacia la Tierra para comunicaciones y buena elevación topográfica."
+    },
+    {
+      "id": "nobile-rim-1",
+      "name": "Nobile Rim 1 (Zona VIPER / CLPS)",
+      "program": "CLPS / Artemis",
+      "latitude_deg": -85.2,
+      "longitude_deg": 31.3,
+      "elevation_km": 1.2,
+      "notes": "Región seleccionada para exploración de volátiles polares y análisis de períodos de sombra."
+    },
+    {
+      "id": "apollo-11-tranquility",
+      "name": "Mar de la Tranquilidad (Apollo 11 - Comparación Ecuatorial)",
+      "program": "Apollo",
+      "latitude_deg": 0.674,
+      "longitude_deg": 23.473,
+      "elevation_km": -1.9,
+      "notes": "Sitio ecuatorial histórico ideal para contrastar el ciclo día/noche lunar de ~14 días terrestres contra la iluminación rasante del polo sur."
+    }
+  ]
+}
